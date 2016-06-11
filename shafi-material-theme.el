@@ -460,9 +460,9 @@
    `(org-todo ((,class (:foreground ,"#ffab91" :bold t :background ,"#dd2c00"))))
    `(org-upcoming-deadline ((,class (:foreground ,orange))))
    `(org-warning ((,class (:weight bold :foreground ,red))))
-   `(org-block-begin-line ((,class (:foreground ,"#b3e5fc" :background "#1e2930"
+   `(org-block-begin-line ((,class (:foreground ,"#b3e5fc" :background, "#3a3a3a"
                                                 :box (:style released-button)))))
-   `(org-block-end-line ((,class (:foreground ,"#b3e5fc" :background "#1e2930"
+   `(org-block-end-line ((,class (:foreground ,"#b3e5fc" :background, "#3a3a3a"
                                               :box (:style released-button)))))
    `(org-kbd ((,class (:background ,inactive-gray :foreground ,foreground
                                    :box (:line-width 1 :color nil :style pressed-button)))))
