@@ -49,46 +49,66 @@
        (256color  (eq (display-color-cells (selected-frame)) 256))
        (truecolor (eq (display-color-cells (selected-frame)) 16777216))
 
-       (background (if (or window-system truecolor) "#263238" "#262626")) ;; sidebar-container
+       (background (if (or window-system truecolor) "#000" "#262626")) ;; sidebar-container
+       ;; seti variables
+       (background-2 "#1E2326")
+       (background-3 "#0D1011")
+       (background-4 "#101112")
+
        (current-line (if (or window-system truecolor)  "#37474f" "#3a3a3a")) ;; tree-row
        (far-background (if (or window-system truecolor)  "#1c1f26" "#121212")) ;; panel-control
        (inactive-gray (if (or window-system truecolor) "#78909c" "#8a8a8a"))
        (header-color (if (or window-system truecolor) "#455A64" "#5f5f5f"))
        (subtle "#a7adba") ;; tree-row-hover-disclosure-button-control
        (selection "#555555") ;; tab-control-dirty-tab-close-button
-       (secondary-selection "#bf616a") ;; tab-control-hover-tab-close-button
+       (secondary-selection "#ff0000") ;; tab-control-hover-tab-close-button
+       ;; (secondary-selection "#bf616a") ;; tab-control-hover-tab-close-button
        (foreground "#ffffff")
        (comment "#b0bec5") ;; table-row
-       (red "#f36c60") ;; tab-control-hover-tab-close-button
+       (red "#CE4045") ;; tab-control-hover-tab-close-button
        (orange "#ff9800") ;; darker tab-control-dirty-tab-close-butto
        (yellow "#fff59d") ;; tab-control-dirty-tab-close-button
-       (green "#8bc34a") ;; complement tab-control-dirty-tab-close-button
+       (green "#9FCA56") ;; complement tab-control-dirty-tab-close-button
        (aqua "#81d4fa") ;; lighter complement tab-control-dirty-tab-close-button
-       (blue "#4dd0e1") ;; complement tab-control-dirty-tab-close-button
-       (purple "#b39ddb")) ;; complement tab-control-dirty-tab-close-button
+       (blue "#55B5DB") ;; complement tab-control-dirty-tab-close-button
+       (purple "#A074C4") ;; complement tab-control-dirty-tab-close-button
+       ;; seti variables
+       (text "#D4D7D6")
+       (text-2 "#858D8A")
+       (text-3 "#41535B")
+       (text-4 "#2F3C42")
+       (text-highlight "#FFFFFF")
+       (text-region "#434546")
+       (text-dired "#A0A0A0")
+       (input-text "#CCCCCC")
+       (light-blue "#75E5F4")
+       (dark-blue "#4F99D3")
+       (intense-green "#8BE03C")
+       )
+
 
   (custom-theme-set-faces
    'shafi-material
-   `(default ((,class (:foreground ,foreground :background ,background))))
+   `(default ((,class (:foreground ,text :background ,background))))
    `(bold ((,class (:weight bold))))
    `(bold-italic ((,class (:slant italic :weight bold))))
    `(underline ((,class (:underline t))))
    `(italic ((,class (:slant italic))))
-   `(font-lock-builtin-face ((,class (:foreground "#ff8A65"))))
+   `(font-lock-builtin-face ((,class (:foreground, purple))))
    `(font-lock-comment-delimiter-face ((,class (:foreground ,comment))))
    `(font-lock-comment-face ((,class (:foreground ,comment))))
-   `(font-lock-constant-face ((,class (:foreground ,green))))
-   `(font-lock-doc-face ((,class (:foreground "moccasin"))))
+   `(font-lock-constant-face ((,class (:foreground ,red))))
+   `(font-lock-doc-face ((,class (:foreground ,blue))))
    `(font-lock-doc-string-face ((,class (:foreground ,yellow))))
-   `(font-lock-function-name-face ((,class (:foreground ,"#84ffff"))))
-   `(font-lock-keyword-face ((,class (:foreground ,yellow))))
+   `(font-lock-function-name-face ((,class (:foreground ,blue))))
+   `(font-lock-keyword-face ((,class (:foreground ,green))))
    `(font-lock-negation-char-face ((,class (:foreground ,blue))))
-   `(font-lock-preprocessor-face ((,class (:foreground "gold"))))
+   `(font-lock-preprocessor-face ((,class (:inherit "gold"))))
    `(font-lock-regexp-grouping-backslash ((,class (:foreground ,yellow))))
    `(font-lock-regexp-grouping-construct ((,class (:foreground ,purple))))
-   `(font-lock-string-face ((,class (:foreground "#9ccc65"))))
-   `(font-lock-type-face ((,class (:foreground "#84ffff"))))
-   `(font-lock-variable-name-face ((,class (:foreground ,"#ffcc80"))))
+   `(font-lock-string-face ((,class (:foreground ,blue))))
+   `(font-lock-type-face ((,class (:foreground ,yellow))))
+   `(font-lock-variable-name-face ((,class (:foreground ,blue))))
    `(font-lock-warning-face ((,class (:weight bold :foreground ,red))))
    `(highlight-numbers-number ((,class (:foreground ,"#9ccc65"))))
    `(shadow ((,class (:foreground ,comment))))
@@ -175,7 +195,7 @@
    `(mmm-output-submode-face ((,class (:background ,current-line))))
 
    ;; Search
-   `(match ((,class (:foreground ,background :background ,green :inverse-video nil))))
+   `(match ((,class (:weight bold :foreground ,background :background ,intense-green :inverse-video nil))))
    `(isearch ((,class (:foreground ,foreground :background ,green))))
    `(isearch-lazy-highlight-face ((,class (:foreground ,background :background ,green :inverse-video nil))))
    `(lazy-highlight-face ((,class (:foreground ,background :background ,green :inverse-video nil))))
@@ -210,8 +230,10 @@
    `(which-func ((,class (:foreground ,blue :background nil))))
 
    ;; Emacs interface
-   `(cursor ((,class (:background ,orange))))
-   `(fringe ((,class (:background ,background))))
+   `(cursor ((,class (:background ,input-text :foreground ,background))))
+   `(fringe ((,class (:background ,background-3 :foreground ,text-4))))
+   `(left-margin ((,class (nil))))
+   `(hl-line ((,class (:background ,background-4))))
    `(linum ((,class (:background ,background :foreground ,subtle))))
    `(linum-highlight-face ((,class (:background ,current-line :foreground ,foreground))))
    `(border ((,class (:background ,current-line))))
@@ -228,8 +250,8 @@
                                            :box nil))))
    `(mode-line-emphasis ((,class (:foreground ,foreground :slant italic))))
    `(mode-line-highlight ((,class (:foreground ,purple :box nil))))
-   `(minibuffer-prompt ((,class (:foreground ,blue))))
-   `(region ((,class (:background ,selection))))
+   `(minibuffer-prompt ((,class (:foreground ,dark-blue :weight bold))))
+   `(region ((,class (:background ,text-region))))
    `(secondary-selection ((,class (:background ,secondary-selection))))
 
    `(header-line ((,class (:inherit mode-line :foreground ,purple :background nil))))
@@ -247,8 +269,8 @@
    `(whitespace-hspace ((,class (:background nil :foreground ,selection))))
 
    ;; Parenthesis matching (built-in)
-   `(show-paren-match-face ((,class (:background ,aqua :foreground "black"))))
-   `(show-paren-mismatch-face ((,class (:background "red1" :foreground "white"))))
+   `(show-paren-match-face ((,class (:foreground , text-2 :underline (:color ,dark_blue :style line)))))
+   `(show-paren-mismatch-face((,class (:foreground , text-2 :underline (:color ,red :style line)))))
 
    ;; Smartparens paren matching
    `(sp-show-pair-match-face ((,class (:foreground "black" :background ,aqua :inherit show-paren-match))))
@@ -324,6 +346,16 @@
    `(diredp-read-priv ((,class (:foreground ,green :background nil))))
    `(diredp-symlink ((,class (:foreground ,purple))))
    `(diredp-write-priv ((,class (:foreground ,yellow :background nil))))
+
+   ;; Dired
+   `(dired-directory ((t (:foreground ,text :weight extrabold))))
+   `(dired-header ((t (:foreground "white"  :background ,blue :weight bold))))
+   `(dired-ignored ((t (:foreground ,text-3))))
+   `(dired-flagged ((t (:foreground ,red :weight bold))))
+   `(dired-marked ((t (:background ,blue :foreground "white" :weight normal))))
+   `(dired-perm-write ((t (:foreground ,yellow :weight ultra-bold))))
+   `(dired-symlink ((t (:foreground ,light-blue :weight normal))))
+   `(dired-warning ((t (:inherit (font-lock-warning-face)))))
 
    ;; Magit
    `(magit-branch ((,class (:foreground ,green))))
