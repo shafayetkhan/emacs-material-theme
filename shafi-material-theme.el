@@ -103,7 +103,7 @@
    `(font-lock-function-name-face ((,class (:foreground ,blue))))
    `(font-lock-keyword-face ((,class (:foreground ,green))))
    `(font-lock-negation-char-face ((,class (:foreground ,blue))))
-   `(font-lock-preprocessor-face ((,class (:inherit "gold"))))
+   `(font-lock-preprocessor-face ((,class (:foreground "gold"))))
    `(font-lock-regexp-grouping-backslash ((,class (:foreground ,yellow))))
    `(font-lock-regexp-grouping-construct ((,class (:foreground ,purple))))
    `(font-lock-string-face ((,class (:foreground ,blue))))
@@ -231,7 +231,7 @@
 
    ;; Emacs interface
    `(cursor ((,class (:background ,input-text :foreground ,background))))
-   `(fringe ((,class (:background ,background-3 :foreground ,text-4))))
+   `(fringe ((,class (:background ,"#000" :foreground ,text-4))))
    `(left-margin ((,class (nil))))
    `(hl-line ((,class (:background ,background-4))))
    `(linum ((,class (:background ,background :foreground ,subtle))))
