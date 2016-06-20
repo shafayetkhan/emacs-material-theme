@@ -96,7 +96,7 @@
    `(italic ((,class (:slant italic))))
    `(font-lock-builtin-face ((,class (:foreground, purple))))
    `(font-lock-comment-delimiter-face ((,class (:foreground ,comment))))
-   `(font-lock-comment-face ((,class (:foreground ,comment))))
+   `(font-lock-comment-face ((,class (:foreground ,text-3))))
    `(font-lock-constant-face ((,class (:foreground ,red))))
    `(font-lock-doc-face ((,class (:foreground ,blue))))
    `(font-lock-doc-string-face ((,class (:foreground ,yellow))))
@@ -656,8 +656,8 @@
    `(company-tooltip-selection ((,class (:weight bold :foreground ,foreground :background ,current-line))))
 
    ;; Powerline
-   `(powerline-active1 ((t (:foreground ,foreground :background ,selection))))
-   `(powerline-active2 ((t (:foreground ,foreground :background ,inactive-gray))))
+   `(powerline-active1 ((t (:foreground ,"white" :background ,"#0087af"))))
+   `(powerline-active2 ((t (:foreground ,"white" :background ,"#005f87"))))
    `(powerline-inactive1 ((t (:foreground ,comment :background ,selection))))
    `(powerline-inactive2 ((t (:foreground ,comment :background ,selection))))
 
