@@ -78,7 +78,7 @@
        (text-3 "#41535B")
        (text-4 "#2F3C42")
        (text-highlight "#FFFFFF")
-       (text-region "#434546")
+       (text-region (if (or window-system truecolor) "#223355" "#434546"))
        (text-dired "#A0A0A0")
        (input-text "#CCCCCC")
        (light-blue "#75E5F4")
