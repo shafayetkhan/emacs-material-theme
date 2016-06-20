@@ -348,14 +348,14 @@
    `(diredp-write-priv ((,class (:foreground ,yellow :background nil))))
 
    ;; Dired
-   `(dired-directory ((t (:foreground ,text :weight extrabold))))
-   `(dired-header ((t (:foreground "white"  :background ,blue :weight bold))))
-   `(dired-ignored ((t (:foreground ,text-3))))
-   `(dired-flagged ((t (:foreground ,red :weight bold))))
-   `(dired-marked ((t (:background ,blue :foreground "white" :weight normal))))
-   `(dired-perm-write ((t (:foreground ,yellow :weight ultra-bold))))
-   `(dired-symlink ((t (:foreground ,light-blue :weight normal))))
-   `(dired-warning ((t (:inherit (font-lock-warning-face)))))
+   `(dired-directory ((,class (:foreground ,text :weight extrabold))))
+   `(dired-header ((,class (:foreground "blue" :weight bold))))
+   `(dired-ignored ((,class (:foreground ,text-3))))
+   `(dired-flagged ((,class (:foreground ,red :weight bold))))
+   `(dired-marked ((,class (:background ,blue :foreground "white" :weight normal))))
+   `(dired-perm-write ((,class (:foreground ,yellow :weight ultra-bold))))
+   `(dired-symlink ((,class (:foreground ,light-blue :weight normal))))
+   `(dired-warning ((,class (:inherit (font-lock-warning-face)))))
 
    ;; Magit
    `(magit-branch ((,class (:foreground ,green))))
