@@ -349,7 +349,7 @@
 
    ;; Dired
    `(dired-directory ((,class (:foreground ,text :weight extrabold))))
-   `(dired-header ((,class (:foreground, blue :weight bold))))
+   `(dired-header ((,class (:foreground, blue :background nil :weight bold))))
    `(dired-ignored ((,class (:foreground ,text-3))))
    `(dired-flagged ((,class (:foreground ,red :weight bold))))
    `(dired-marked ((,class (:background ,blue :foreground "white" :weight normal))))
